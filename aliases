@@ -1,0 +1,10 @@
+alias cls="clear"
+alias rpac="sudo rm /var/lib/pacman/db.lck"
+alias lsla="
+read file;
+if [$file -d]{
+    ls -la $file | less
+}else{
+    echo "No es un directorio"
+}
+"
