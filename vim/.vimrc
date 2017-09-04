@@ -2,42 +2,45 @@
 " Author and maintainer: Dani Rodríguez <danirod@outlook.com>
 " Public backup: http://github.com/danirod/vimrc
 "
-" LICENSE:
-" You are free to read and study this bundle or snippets of it and to use
-" it on your own vimrc settings. Feel free to tweak and adapt my vimrc to
-" suit your needs and to make the changes yours. Attribution to this vimrc
-" is not required although is thanked.
+    " LICENSE:
+    " You are free to read and study this bundle or snippets of it and to use
+    " it on your own vimrc settings. Feel free to tweak and adapt my vimrc to
+    " suit your needs and to make the changes yours. Attribution to this vimrc
+    " is not required although is thanked.
 
-" vim-plug is not installed
-if empty(glob("~/.vim/autoload/plug.vim"))
-    silent !curl -fLso ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall
-end
+    " vim-plug is not installed
 
-" Init vim-plug plugins
-call plug#begin('~/.vim/plugged/')
+    execute pathogen#infect()
 
-" General purpose plugins
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'ap/vim-buftabline'
-Plug 'mattn/emmet-vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'scrooloose/nerdtree'
+    if empty(glob("~/.vim/autoload/plug.vim"))
+        silent !curl -fLso ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        autocmd VimEnter * PlugInstall
+    end
 
-" Language support
-Plug 'wlangstroth/vim-racket'
-Plug 'tfnico/vim-gradle'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-endwise'
-Plug 'alvan/vim-closetag'
-Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
+    " Init vim-plug plugins
+    call plug#begin('~/.vim/plugged/')
 
-" Colorschemes
-    Plug 'morhetz/gruvbox'
-call plug#end()
+    " General purpose plugins
+    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'ap/vim-buftabline'
+    Plug 'mattn/emmet-vim'
+    Plug 'editorconfig/editorconfig-vim'
+    Plug 'scrooloose/nerdtree'
+
+
+    " Language support
+    Plug 'wlangstroth/vim-racket'
+    Plug 'tfnico/vim-gradle'
+    Plug 'tpope/vim-rails'
+    Plug 'tpope/vim-endwise'
+    Plug 'alvan/vim-closetag'
+    Plug 'rust-lang/rust.vim'
+    Plug 'racer-rust/vim-racer'
+    " Colorschemes
+        Plug 'morhetz/gruvbox'
+    call plug#end()
 
 " Stop acting like classic vi
 "set nocompatible            " disable vi compatibility mode

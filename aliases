@@ -1,5 +1,8 @@
 alias cls="clear"
 alias rpac="sudo rm /var/lib/pacman/db.lck"
+alias ssh.dr="/sbin/service sshd start"
+alias ssh.ds="/sbin/service sshd status"
+alias cursor-size="gsettings set org.gnome.desktop.interface cursor-size"
 alias lsla="
 read file;
 if [$file -d]{
